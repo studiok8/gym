@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>sample</title>
+</head>
+<body>
+    <h1>株式会社 Hawk</h1>
+        <div class="leftNav">
+            <p>施設紹介</p>
+            <p>プログラム</p>
+            <p>料金</p>
+            <p>アクセス</p>
+        </div>
+        <div class="content1">
+            <h2>〇〇〇GYM</h2>
+        </div>
+        <div id="navi">
+            <a class="btn" href="">ご入会はこちら</a>
+        </div>
+    <section id="screen1" id="animation">
+    </section>
+        <main class="content2">
+                <div id="box1">
+                    <p>ニュース</p> 
+                    <dt>oooooooooo</dt>
+                    <dd>oooooooooo</dd>
+                    <dd>oooooooooo</dd>
+                </div>
+                <div id="box2">
+                    <p>館内写真</p>    
+                    <dt>oooooooooo</dt>
+                    <dd>oooooooooo</dd>
+                    <dd>oooooooooo</dd>         
+                </div>
+                <div id="box3">
+                    <p>トレーナー紹介</p>
+                    <dt>oooooooooo</dt>
+                    <dd>oooooooooo</dd>
+                    <dd>oooooooooo</dd>
+                </div>
+        </main>
+        <aside>
+            <div class="brand">
+                <h3>ののののののののののの</h3>
+            </div>
+        </aside>
+    <nav>
+    <footer>  
+            <li>株式会社 Hawk</li>
+            <li>サイトマップ</li>
+            <li>会社概要</li>
+            <p><img src="gull1.png" alt=""></p>  
+    </footer>
+    </nav>
+    <small>&copy;2020 STUDIO-K All rights reserved.</small>
+
+    <script>
+        $(window).bind('scroll', function() {
+        var navHeight = $( window ).height()-80;
+              if ($(window).scrollTop() > navHeight) {
+                  $('nav').addClass('fixed');
+              }
+              else {
+                  $('nav').removeClass('fixed');
+              }
+         });
+         $('.animation').css('visibility','hidden');
+         $(window).scroll(function(){    
+             var windowHeight = $(window).height(),
+             topWindow = $(window).scrollTop();
+         $('.animation').each(function(){
+             var targetPosition = $(this).offset().top;
+         if(topWindow > targetPosition - windowHeight +200){
+         $(this).addClass("fadeInDown");
+         }
+         });
+         });
+     </script>
+
+</body>
+</html>
